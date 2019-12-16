@@ -1,5 +1,9 @@
 import { ServiceConfigurationOptions } from "aws-sdk/lib/service";
 
-export default function(
+function awsConfig(
   options: ServiceConfigurationOptions
 ): ServiceConfigurationOptions;
+
+declare module 'aws-config' {
+  export = awsConfig;
+}
